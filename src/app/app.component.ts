@@ -9,9 +9,15 @@ import { finalize, last } from 'rxjs/operators';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+    /**
+   * Keeps track of the user input
+   */
   source: string = '';
   title = 'images-tinymce';
   tinymceinit: any = {};
+    /**
+   * Configuration for our tiny mce editor
+   */
   config: EditorComponent['init'] = {
     plugins: 'lists link image table code help wordcount',
     toolbar:
@@ -57,6 +63,6 @@ export class AppComponent implements OnInit {
   constructor(private storage: AngularFireStorage) {}
 
   ngOnInit() {
-    this.tinymceinit;
+    // this.tinymceinit;
   }
 }
